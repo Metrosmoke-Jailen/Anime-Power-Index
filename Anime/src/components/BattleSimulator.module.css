@@ -1,0 +1,95 @@
+.simulator {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.light {
+  background: #f2f2f2;
+  color: #111;
+}
+
+.dark {
+  background: #0f0f1a;
+  color: white;
+}
+
+.arena {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.fighter {
+  flex: 1;
+}
+
+.healthBar {
+  height: 20px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.healthFill {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.battleButton {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: linear-gradient(45deg, crimson, purple);
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.battleButton:hover {
+  transform: scale(1.05);
+}
+
+.battleText {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.winner {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  animation: pop 0.6s ease forwards;
+}
+
+.victory {
+  color: limegreen;
+  text-shadow: 0 0 15px limegreen;
+}
+
+.draw {
+  color: gray;
+}
+
+@keyframes pop {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1.1); opacity: 1; }
+}
+
+/* Screen Shake */
+.shake {
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translate(2px, 1px); }
+  25% { transform: translate(-2px, -2px); }
+  50% { transform: translate(2px, -1px); }
+  75% { transform: translate(-1px, 2px); }
+  100% { transform: translate(1px, -2px); }
+}

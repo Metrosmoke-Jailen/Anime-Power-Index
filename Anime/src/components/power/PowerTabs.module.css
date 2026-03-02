@@ -1,0 +1,39 @@
+.panel {
+  margin-top: 1rem;
+}
+
+.tabHeader {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.tabBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #9ca3af;
+  background: #1f2937;
+  color: #f9fafb;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tabBtn:hover {
+  background: #374151;
+}
+
+.active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.tabContent {
+  background: #111827;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #f9fafb;
+}
+
+.green { color: #22c55e; }
+.red { color: #ef4444; }

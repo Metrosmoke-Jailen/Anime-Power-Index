@@ -1,0 +1,96 @@
+.card {
+  position: relative;
+  padding: 16px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.selected {
+  outline: 3px solid #4cafef;
+}
+
+.rankBadge {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.voteText {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.overallContainer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.overallBar {
+  height: 8px;
+  border-radius: 6px;
+  background: #ddd;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.overallFill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff4d4d, #ffcc00);
+  transition: width 0.6s ease;
+}
+
+.statContainer {
+  margin-bottom: 8px;
+}
+
+.statLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.statBar {
+  height: 6px;
+  border-radius: 6px;
+  background: #ccc;
+  overflow: hidden;
+}
+
+.statFill {
+  height: 100%;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  transition: width 0.6s ease;
+}
+
+.buttonGroup {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.voteButton {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.voteButton:hover {
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.shareLink {
+  margin-top: 8px;
+  font-size: 14px;
+}

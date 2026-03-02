@@ -1,0 +1,17 @@
+.search {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.search.dark {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.search.light {
+  background-color: #fff;
+  color: #111;
+}

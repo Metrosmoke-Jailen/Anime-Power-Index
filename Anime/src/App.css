@@ -1,0 +1,92 @@
+/* App-level styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+/* Dark Mode Overrides */
+.dark {
+  background-color: #121212;
+  color: #fff;
+}
+
+.dark button {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark a {
+  color: #9ad1ff;
+}
+
+/* Light Mode Overrides */
+.light {
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.light button {
+  background-color: #eee;
+  color: #000;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.p-2 {
+  padding: 1rem;
+}
+
+/* Grid for character cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Make app stretch full height */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+/* Main content should fill remaining space between header and footer */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}

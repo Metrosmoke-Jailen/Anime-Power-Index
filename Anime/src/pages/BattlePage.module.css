@@ -1,0 +1,19 @@
+.container {
+  padding: 2rem;
+}
+
+.backBtn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.light {
+  background-color: #f9f9f9;
+  color: #111;
+}
+
+.dark {
+  background-color: #1e1e1e;
+  color: #fff;
+}

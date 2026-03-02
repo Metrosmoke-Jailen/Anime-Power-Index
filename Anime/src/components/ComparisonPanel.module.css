@@ -1,0 +1,112 @@
+.panel {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  transition: all 0.3s ease;
+}
+
+.light {
+  background: linear-gradient(135deg, #ffffff, #f3f4f6);
+  color: #111;
+}
+
+.dark {
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: #f9fafb;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.character {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character h3 {
+  margin-bottom: 0.5rem;
+}
+
+.score {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.vs {
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0.6;
+}
+
+.winnerGlow {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 150, 0.6);
+}
+
+.winnerText {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #22c55e;
+  margin-bottom: 1rem;
+}
+
+.draw {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: gray;
+  margin-bottom: 1rem;
+}
+
+.statsSection {
+  margin-top: 1rem;
+}
+
+.statRow {
+  margin-bottom: 1rem;
+}
+
+.statLabel {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.barContainer {
+  position: relative;
+  height: 14px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.bar1,
+.bar2 {
+  position: absolute;
+  height: 100%;
+  transition: width 0.6s ease;
+}
+
+.bar1 {
+  left: 0;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+
+.bar2 {
+  right: 0;
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}

@@ -1,0 +1,209 @@
+/* Container and Theme */
+.container {
+  padding: 2rem;
+  min-height: 100vh;
+  transition: background 0.3s ease;
+}
+
+.light {
+  background: linear-gradient(135deg, #f4f6ff, #e9ecff);
+  color: #111;
+}
+
+.dark {
+  background: linear-gradient(135deg, #0f0f1b, #1c1c2e);
+  color: #f5f5f5;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  opacity: 0.7;
+  font-size: 1rem;
+}
+
+/* Buttons Row */
+.buttonsRow {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+/* Back + Random 2 Fighters Button */
+.buttonsRow .randomBtn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #ff4d6d;
+  color: white;
+}
+
+.buttonsRow .randomBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 77, 109, 0.7);
+}
+
+/* Selection Counter */
+.counter {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Cards */
+.card {
+  padding: 1.2rem;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid transparent;
+  text-align: center;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  margin-bottom: 0.3rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Selected Card */
+.selected {
+  border: 2px solid #ff4d6d;
+  box-shadow: 0 0 15px rgba(255, 77, 109, 0.6);
+  transform: scale(1.05);
+}
+
+.selectedBadge {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #ff4d6d;
+  font-weight: bold;
+}
+
+/* Top Battle Section */
+.topBattleSection {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  animation: fadeInBattle 0.6s ease forwards;
+}
+
+/* Fade In Animation */
+@keyframes fadeInBattle {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* VS Divider */
+.vsContainer {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.vsText {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: #ff4d6d;
+  position: relative;
+  display: inline-block;
+  animation: pulseVS 1.5s infinite ease-in-out;
+}
+
+/* Glowing Pulse for VS */
+@keyframes pulseVS {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+  }
+  50% {
+    transform: scale(1.1);
+    text-shadow: 0 0 25px rgba(255, 77, 109, 1);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+  }
+}
+
+/* Battle Button */
+.battleBtn {
+  display: block;
+  margin: 2rem auto 0 auto;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.battleBtn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 120, 0, 0.6);
+}
+
+/* Flash Animation on Random 2 Fighters */
+.flash {
+  animation: flashEffect 0.6s ease forwards;
+}
+
+@keyframes flashEffect {
+  0% {
+    box-shadow: 0 0 0px rgba(255, 255, 255, 0);
+    transform: scale(0.95);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(255, 255, 255, 0);
+    transform: scale(1);
+  }
+}

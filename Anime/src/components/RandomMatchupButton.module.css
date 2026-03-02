@@ -1,0 +1,40 @@
+.randomBtn {
+  margin: 20px 0;
+  padding: 12px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.5px;
+}
+
+/* Light Mode */
+.light .randomBtn {
+  background: linear-gradient(135deg, #ff8c42, #ff3c38);
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 60, 56, 0.3);
+}
+
+.light .randomBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(255, 60, 56, 0.4);
+}
+
+/* Dark Mode */
+.dark .randomBtn {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  box-shadow: 0 4px 14px rgba(106, 17, 203, 0.4);
+}
+
+.dark .randomBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(106, 17, 203, 0.6);
+}
+
+/* Click Effect */
+.randomBtn:active {
+  transform: scale(0.96);
+}
