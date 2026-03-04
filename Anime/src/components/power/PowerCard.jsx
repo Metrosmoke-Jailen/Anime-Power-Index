@@ -1,17 +1,28 @@
-// src/components/power/PowerCard.jsx
 import { Link } from "react-router-dom";
 import styles from "./PowerCard.module.css";
 
 function PowerCard({ power }) {
+  const avg = power.stats?.avgCharacterStats || {};
+
+  const firstRule =
+    power.rules && power.rules.length > 0
+      ? power.rules[0].description
+      : "No rules defined.";
+
   return (
     <div className={styles.card}>
       <h3>{power.name}</h3>
-      <p>{power.rules.substring(0, 80)}...</p>
+
+      <p>{firstRule.substring(0, 100)}...</p>
 
       <div className={styles.stats}>
-        <span>💪 {power.avgStats.strength}</span>
-        <span>⚡ {power.avgStats.speed}</span>
-        <span>🧠 {power.avgStats.intelligence}</span>
+        <span>💪 {avg.strength || 0}</span>
+        <span>⚡ {avg.speed || 0}</span>
+        <span>🧠 {avg.intelligence || 0}</span>
+      </div>
+
+      <div className={styles.systemMeta}>
+        <span>Complexity: {power.stats?.complexity}</span>
       </div>
 
       <Link to={`/powers/${power.id}`}>

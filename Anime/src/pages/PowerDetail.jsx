@@ -14,9 +14,16 @@ function PowerDetail() {
     <div className={styles.container}>
       <h1>⚡ {power.name}</h1>
       <div className={styles.avgStats}>
-        <span>💪 {power.avgStats.strength}</span>
-        <span>⚡ {power.avgStats.speed}</span>
-        <span>🧠 {power.avgStats.intelligence}</span>
+        <span>💪 {power.stats?.avgCharacterStats?.strength}</span>
+        <span>⚡ {power.stats?.avgCharacterStats?.speed}</span>
+        <span>🧠 {power.stats?.avgCharacterStats?.intelligence}</span>
+      </div>
+
+      <div className={styles.systemStats}>
+        <p>System Strength: {power.stats?.strength}</p>
+        <p>Versatility: {power.stats?.versatility}</p>
+        <p>Complexity: {power.stats?.complexity}</p>
+        <p>Scalability: {power.stats?.scalability}</p>
       </div>
 
       <PowerTabs power={power} />
